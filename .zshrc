@@ -83,8 +83,34 @@ source $ZSH/oh-my-zsh.sh
 
 source /opt/ros/noetic/setup.zsh
 
+export VISUAL=nvim;
+export EDITOR=nvim;
+
 alias sr="source devel/setup.zsh"
 alias bs="source ~/.zshrc"
+alias cbe="catkin build exploration"
+alias cba="catkin build acl_exploration"
+alias cbs="catkin build stage_planner"
+alias tmkill="tmux kill-session"
+alias cde="cd ~/catkin_workspaces/exploration_ws; sr"
+alias remote_rviz="export ROS_MASTER_URI=http://10.42.0.1:11311; export ROS_IP=10.42.0.232"
+alias remote_mesh_shafter3d="export ROS_MASTER_URI=http://192.168.10.35:11311; export ROS_IP=192.168.10.232"
+alias remote_mesh_shafter2="export ROS_MASTER_URI=http://192.168.10.25:11311; export ROS_IP=192.168.10.232"
+alias cbs="catkin build stage_planner"
+alias ssh_mesh_shafter2_field="ssh shafter2@192.168.10.25"
+alias ssh_mesh_shafter3d_field="ssh shafter3d@192.168.10.35"
+alias ssh_mesh_shafter4_field="ssh shafter4@192.168.10.45"
+alias ssh_dronedust_vicon="ssh dronedust@192.168.1.95"
+alias dronedust_ssh_subt="ssh dronedust@10.42.0.1"
+alias shafter4_field="ssh shafter4@10.42.0.1"
+alias dronedust_ssh="ssh dronedust@10.42.0.1"
+alias shafter2_field="ssh shafter2@10.42.0.1"
+alias shafter3d_field="ssh shafter3d@10.42.0.1"
+alias pioneer_field="ssh nucnuc@10.42.0.1"
+alias spotnuc_vnc='ssh spotnuc@10.42.0.1 -L 5901:localhost:5901'
+alias shafterx1_lab='ssh shafterx1@192.168.1.250'
+alias shafterx1_field='ssh shafterx1@10.42.0.1'
+alias vim="nvim"
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

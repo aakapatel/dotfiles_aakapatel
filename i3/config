@@ -157,7 +157,9 @@ mode "resize" {
        bindsym Return mode "default"
        bindsym Escape mode "default"
 }
-bindsym $mod+Return exec --no-startup-id alacritty;focus
+bindsym $mod+Return exec --no-startup-id alacritty; focus
+
+# bindsym $mod+Shift+Return exec --no-startup-id alacritty -e ranger; focus
 
 #bindsym control+mod1+u exec --no-startup-id pavucontrol
 bindsym Print exec maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png -i
