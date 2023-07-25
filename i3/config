@@ -276,5 +276,7 @@ bar {
 
     ##STOP THEMING WM
 
+exec xset dpms 0 0 1200
+
 exec xset r rate 300 80 &
 

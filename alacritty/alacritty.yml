@@ -53,5 +53,5 @@ font:
   italic:
     family: Hack Nerd Font
 
-  size: 10
+  size: 8
 theme: iTerm-Default
