@@ -15,6 +15,8 @@ set $down k
 set $left j
 set $right semicolon
 
+set $ws8 "8"
+set $ws9 "9"
 font pango:Hack Nerd Font Mono 
 
 # switch to workspace
@@ -25,8 +27,8 @@ bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -38,6 +40,11 @@ bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
+
+
+assign [class="rviz"] $ws8
+assign [class="gazebo"] $ws9
+
 
 bindsym $mod+0 mode "$mode_system"
 
@@ -142,7 +149,7 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-       bindsym $left       resize shrink width 10 px or 10 ppt
+       bindsym $left       resize shrink width 10 p/home/aakapatel/Downloads/jp.jpgx or 10 ppt
        bindsym $down       resize grow height 10 px or 10 ppt
        bindsym $up         resize shrink height 10 px or 10 ppt
        bindsym $right      resize grow width 10 px or 10 ppt
@@ -230,11 +237,11 @@ set $urgent-bg-color     #E53935
 
 # exec_always feh --bg-scale /home/aakapatel/Pictures/him.jpg
 
-# exec_always feh --bg-scale /home/aakapatel/Pictures/getshitdone.jpg
+# exec_always feh --bg-scale /home/aakapatel/Pictures/dodge2.jpg
 
-exec_always feh --bg-scale /home/aakapatel/Pictures/px7.jpg
+exec_always feh --bg-scale /home/aakapatel/Pictures/px9.jpg
 
-#exec_always feh --bg-scale /home/aakapatel/Pictures/yod.jpg
+# exec_always feh --bg-scale /home/aakapatel/Pictures/dodge2.jpg
 
 bindsym $mod+d exec rofi -show drun -opacity "50" -font "Hack Nerd Font Mono 18"
 
@@ -250,13 +257,13 @@ bar {
 
     colors {
             separator  #0f4f0f
-            background #00002f
+            background #00001f
             statusline #00ff00
 
             #                   border  background text
-            focused_workspace  #00ff00 #00002f    #ffffff
+            focused_workspace  #00ff00 #00001f    #ffffff
             active_workspace   #1f222d #252936    #ffffff
-            inactive_workspace #00002f #00002f    #8f8f8f
+            inactive_workspace #00001f #00001f    #8f8f8f
             urgent_workspace   #1f222d #1f222d    #ee829f
             binding_mode       #1f222d #81a1c1    #2e3440
     }
@@ -276,7 +283,10 @@ bar {
 
     ##STOP THEMING WM
 
-exec xset dpms 0 0 1200
+# exec --no-startup-id xset -dpms
 
-exec xset r rate 300 80 &
+exec xset r rate 300 80 
 
+# exec_always xset -dpms 
+
+exec_always --no-startup-id ~/.config/i3/scripts/dpms_off.sh
