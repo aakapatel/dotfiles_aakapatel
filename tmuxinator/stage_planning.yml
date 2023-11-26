@@ -1,42 +1,37 @@
 # ~/.tmuxinator/stage_planning.yml 
 
+define: &initialize_stage "rosservice call /initialize_planner \"initialize: true\" " 
+
 name: stage_planning
 root: ~/
 windows:
   - stage_main:
-      layout: 5b08,173x46,0,0{66x46,0,0[66x16,0,0,0,66x16,0,17,2,66x12,0,34,3],106x46,67,0[106x26,67,0{65x26,67,0,4,40x26,133,0,5},106x19,67,27{65x19,67,27,6,40x19,133,27[40x11,133,27,7,40x7,133,39,8]}]}
+      layout: even-horizontal 
       panes:
-        - frontiers_extraction:
-          - cde
-          - sleep 5  
-          - roslaunch stage_planner frontier_extraction.launch 
         - stage_interface:
-          - cde 
-          - sleep 6 
-          - roslaunch stage_planner stage_interface.launch 
-        - control_interface:
           - cde
           - sleep 2  
-          - roslaunch stage_planner control_interface.launch 
+          - mon launch stage_planner stage_interface.launch 
         - graph_management:
           - cde 
           - sleep 6 
-          - roslaunch stage_planner graph_management.launch
-        - rotors:
-          - cde 
-          - sleep 1 
-          - roslaunch rotors_gazebo custom_drone.launch 
-        - path_pub:  
-          - cde  
-        - pub:
-          - cde 
-        - roscore: 
-          - roscore 
+          - mon launch stage_planner graph_management.launch
 
   - publishers:
-      layout: main-vertical 
+      # layout: main-vertical 
+      layout: tiled 
       panes:
-        - one:
+        - rotors:
           - cde
-        - two:
+          - sleep 1  
+          - roslaunch rotors_gazebo custom_drone.launch 
+        - initialization:
           - cde 
+          - sleep 8 
+          - *initialize_stage 
+        - controller:  
+          - cde 
+          - sleep 4
+          - roslaunch mav_linear_mpc mav_linear_mpc_sim.launch mav_name:=hummingbird
+        - roscore: 
+          - roscore 

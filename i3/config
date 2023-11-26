@@ -252,6 +252,7 @@ bar {
 	position bottom
     font pango: Hack Nerd Font Mono 16
 	status_command i3status
+  # status_command ~/.config/i3/scripts/cpu_temp.sh
     tray_padding 1
     strip_workspace_numbers yes
 
