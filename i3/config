@@ -184,47 +184,47 @@ bindsym $mod+b bar mode toggle
 
 bindsym $mod+i bar mode invisible
 for_window [class="^.*"] border pixel 1
-gaps inner 10
-gaps outer 1
-smart_gaps on
-smart_borders on
-
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
-
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
-
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
-
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
+# gaps inner 10
+# gaps outer 1
+# smart_gaps on
+# smart_borders on
+#
+# set $mode_gaps Gaps: (o) outer, (i) inner
+# set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+# set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+# bindsym $mod+Shift+g mode "$mode_gaps"
+#
+# mode "$mode_gaps" {
+#         bindsym o      mode "$mode_gaps_outer"
+#         bindsym i      mode "$mode_gaps_inner"
+#         bindsym Return mode "default"
+#         bindsym Escape mode "default"
+# }
+#
+# mode "$mode_gaps_inner" {
+#         bindsym plus  gaps inner current plus 5
+#         bindsym minus gaps inner current minus 5
+#         bindsym 0     gaps inner current set 0
+#
+#         bindsym Shift+plus  gaps inner all plus 5
+#         bindsym Shift+minus gaps inner all minus 5
+#         bindsym Shift+0     gaps inner all set 0
+#
+#         bindsym Return mode "default"
+#         bindsym Escape mode "default"
+# }
+# mode "$mode_gaps_outer" {
+#         bindsym plus  gaps outer current plus 5
+#         bindsym minus gaps outer current minus 5
+#         bindsym 0     gaps outer current set 0
+#
+#         bindsym Shift+plus  gaps outer all plus 5
+#         bindsym Shift+minus gaps outer all minus 5
+#         bindsym Shift+0     gaps outer all set 0
+#
+#         bindsym Return mode "default"
+#         bindsym Escape mode "default"
+# }
 
 
 
@@ -235,23 +235,18 @@ set $text-color          #f3f4f5
 #set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
-# exec_always feh --bg-scale /home/aakapatel/Pictures/him.jpg
 
-# exec_always feh --bg-scale /home/aakapatel/Pictures/dodge2.jpg
+exec_always feh --bg-scale /home/aakapatel/Pictures/forestlake.jpg
 
-exec_always feh --bg-scale /home/aakapatel/Pictures/px9.jpg
-
-# exec_always feh --bg-scale /home/aakapatel/Pictures/dodge2.jpg
-
-bindsym $mod+d exec rofi -show drun -opacity "50" -font "Hack Nerd Font Mono 18"
+bindsym $mod+d exec rofi -show drun -opacity "50" -font "Hack Nerd Font Mono 18" -show-icons
 
 exec_always compton -f
 
 bar {
-   	height 30
-	position bottom
-    font pango: Hack Nerd Font Mono 16
-	status_command i3status
+   	# height 30
+	  position bottom
+    font pango: Hack Nerd Font Mono 15
+	  status_command i3status
   # status_command ~/.config/i3/scripts/cpu_temp.sh
     tray_padding 1
     strip_workspace_numbers yes
@@ -262,7 +257,7 @@ bar {
             statusline #00ff00
 
             #                   border  background text
-            focused_workspace  #00ff00 #00001f    #ffffff
+            focused_workspace  #006f00 #00001f    #ffffff
             active_workspace   #1f222d #252936    #ffffff
             inactive_workspace #00001f #00001f    #8f8f8f
             urgent_workspace   #1f222d #1f222d    #ee829f
@@ -287,6 +282,8 @@ bar {
 # exec --no-startup-id xset -dpms
 
 exec xset r rate 300 80 
+
+exec_always setxkbmap -layout us
 
 # exec_always xset -dpms 
 
