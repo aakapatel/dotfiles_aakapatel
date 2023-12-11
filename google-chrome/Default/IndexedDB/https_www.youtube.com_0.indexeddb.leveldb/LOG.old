@@ -1,0 +1,6 @@
+2023/11/28-23:12:50.122 31a6 Reusing MANIFEST /home/aakapatel/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/11/28-23:12:50.122 31a6 Recovering log #3
+2023/11/28-23:12:50.130 31a6 Reusing old log /home/aakapatel/.config/google-chrome/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000003.log 
+2023/11/28-23:12:51.394 31a6 Level-0 table #5: started
+2023/11/28-23:12:51.401 31a6 Level-0 table #5: 1758265 bytes OK
+2023/11/28-23:12:51.403 31a6 Delete type=0 #3
