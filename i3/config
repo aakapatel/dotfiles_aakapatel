@@ -184,48 +184,51 @@ bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 bindsym $mod+b bar mode toggle
 
 bindsym $mod+i bar mode invisible
-for_window [class="^.*"] border pixel 1
-# gaps inner 10
-# gaps outer 1
-# smart_gaps on
-# smart_borders on
+for_window [class="^.*"] border pixel 0
+gaps inner 10
+gaps outer 1
+#smart_gaps on
+smart_borders on
+
+
+
 #
-# set $mode_gaps Gaps: (o) outer, (i) inner
-# set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-# set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-# bindsym $mod+Shift+g mode "$mode_gaps"
-#
-# mode "$mode_gaps" {
-#         bindsym o      mode "$mode_gaps_outer"
-#         bindsym i      mode "$mode_gaps_inner"
-#         bindsym Return mode "default"
-#         bindsym Escape mode "default"
-# }
-#
-# mode "$mode_gaps_inner" {
-#         bindsym plus  gaps inner current plus 5
-#         bindsym minus gaps inner current minus 5
-#         bindsym 0     gaps inner current set 0
-#
-#         bindsym Shift+plus  gaps inner all plus 5
-#         bindsym Shift+minus gaps inner all minus 5
-#         bindsym Shift+0     gaps inner all set 0
-#
-#         bindsym Return mode "default"
-#         bindsym Escape mode "default"
-# }
-# mode "$mode_gaps_outer" {
-#         bindsym plus  gaps outer current plus 5
-#         bindsym minus gaps outer current minus 5
-#         bindsym 0     gaps outer current set 0
-#
-#         bindsym Shift+plus  gaps outer all plus 5
-#         bindsym Shift+minus gaps outer all minus 5
-#         bindsym Shift+0     gaps outer all set 0
-#
-#         bindsym Return mode "default"
-#         bindsym Escape mode "default"
-# }
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
 
 
 
@@ -237,7 +240,9 @@ set $text-color          #f3f4f5
 set $urgent-bg-color     #E53935
 
 
-exec_always feh --bg-scale /home/aakapatel/Pictures/forestlake.jpg
+#exec_always feh --bg-scale /home/aakapatel/Pictures/forestlake.jpg
+
+exec_always feh --bg-fill --randomize /home/aakapatel/Pictures/Walls/
 
 bindsym $mod+d exec rofi -show drun -opacity "50" -font "Hack Nerd Font Mono 18" -show-icons
 
@@ -254,13 +259,13 @@ bar {
 
     colors {
             separator  #0f4f0f
-            background #002b36
+            background #000000
             statusline #00ff00
 
             #                   border  background text
             focused_workspace  #93a1a1 #93a1a1    #000000
-            active_workspace   #002b36 #002b36    #ffffff
-            inactive_workspace #002b36 #002b36    #ffffff
+            active_workspace   #000000 #000000    #ffffff
+            inactive_workspace #000000 #000000    #ffffff
             urgent_workspace   #ee889f #93a1a1    #ffffff
             binding_mode       #1f222d #81a1c1    #2e3440
     }
@@ -285,6 +290,8 @@ bar {
 exec xset r rate 300 80 
 
 # exec_always setxkbmap -layout us
+
+
 
 # exec_always xset -dpms 
 exec_always --no-startup-id ~/.config/i3/scripts/keyboard.sh
