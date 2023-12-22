@@ -260,7 +260,7 @@ bar {
     colors {
             separator  #0f4f0f
             background #000000
-            statusline #00ff00
+            statusline #009900
 
             #                   border  background text
             focused_workspace  #93a1a1 #93a1a1    #000000
