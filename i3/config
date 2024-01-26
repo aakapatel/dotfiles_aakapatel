@@ -184,7 +184,7 @@ bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 bindsym $mod+b bar mode toggle
 
 bindsym $mod+i bar mode invisible
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 2
 gaps inner 10
 gaps outer 1
 #smart_gaps on
