@@ -145,10 +145,6 @@ bindsym $mod+r mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
        bindsym $left       resize shrink width 10 p/home/aakapatel/Downloads/jp.jpgx or 10 ppt
        bindsym $down       resize grow height 10 px or 10 ppt
        bindsym $up         resize shrink height 10 px or 10 ppt
@@ -291,7 +287,7 @@ exec xset r rate 300 80
 
 # exec_always setxkbmap -layout us
 
-
+exec --no-startup-id ~/.config/i3/scripts/office.sh
 
 # exec_always xset -dpms 
 exec_always --no-startup-id ~/.config/i3/scripts/keyboard.sh
