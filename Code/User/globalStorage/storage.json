@@ -56,10 +56,22 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/aakapatel/catkin_workspaces/exploration_ws/src/ExplorationRRT/src/errt.cpp",
+                                        "path": "/home/aakapatel/catkin_workspaces/exploration_ws/src/ExplorationRRT/src/errt.cpp",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/catkin_workspaces/exploration_ws/src/ExplorationRRT/src/errt.cpp"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -472,6 +484,10 @@
                                     "label": "&&Panel"
                                 },
                                 {
+                                    "id": "toggle.toggleCustomTitleBar",
+                                    "label": "Custom Title Bar"
+                                },
+                                {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
@@ -487,6 +503,10 @@
                                                 "id": "workbench.action.activityBarLocation.side",
                                                 "label": "&&Side",
                                                 "checked": true
+                                            },
+                                            {
+                                                "id": "workbench.action.activityBarLocation.top",
+                                                "label": "&&Top"
                                             },
                                             {
                                                 "id": "workbench.action.activityBarLocation.hide",
@@ -571,6 +591,10 @@
                                                 "id": "workbench.action.editorActionsDefault",
                                                 "label": "Tab Bar",
                                                 "checked": true
+                                            },
+                                            {
+                                                "id": "workbench.action.editorActionsTitleBar",
+                                                "label": "Title Bar"
                                             },
                                             {
                                                 "id": "workbench.action.hideEditorActions",
@@ -730,6 +754,10 @@
                     {
                         "id": "workbench.view.extensions",
                         "label": "E&&xtensions"
+                    },
+                    {
+                        "id": "workbench.view.extension.test",
+                        "label": "T&&esting"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1052,6 +1080,10 @@
                                 {
                                     "id": "editor.debug.action.addLogPoint",
                                     "label": "&&Logpoint..."
+                                },
+                                {
+                                    "id": "editor.debug.action.triggerByBreakpoint",
+                                    "label": "&&Triggered Breakpoint..."
                                 }
                             ]
                         }
@@ -1437,6 +1469,11 @@
                 "isNative": false,
                 "userSettingsLabel": "ctrl+k ctrl+shift+\\"
             },
+            "workbench.action.copyEditorToNewWindow": {
+                "label": "Ctrl+K O",
+                "isNative": false,
+                "userSettingsLabel": "ctrl+k o"
+            },
             "workbench.action.toggleEditorGroupLayout": {
                 "label": "Shift+Alt+0",
                 "userSettingsLabel": "shift+alt+0"
@@ -1686,10 +1723,11 @@
             "backupPath": "/home/aakapatel/.config/Code/Backups/1706389651801",
             "uiState": {
                 "mode": 1,
-                "x": 13,
-                "y": 13,
-                "width": 940,
-                "height": 1143
+                "x": 5131,
+                "y": 31,
+                "width": 2538,
+                "height": 1373,
+                "zoomLevel": 3
             }
         },
         "openedWindows": []

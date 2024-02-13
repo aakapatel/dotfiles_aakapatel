@@ -8,9 +8,13 @@ import:
 
 #  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
 
+
+
+
+
 font:
   normal:
     family: Hack Nerd font
     style: Regular
-  size: 10.0
+  size: 8.0
 

@@ -289,6 +289,8 @@ exec xset r rate 300 80
 
 exec --no-startup-id ~/.config/i3/scripts/office.sh
 
+exec --no-startup-id blueman-applet
+
 # exec_always xset -dpms 
 exec_always --no-startup-id ~/.config/i3/scripts/keyboard.sh
 exec_always --no-startup-id ~/.config/i3/scripts/dpms_off.sh
