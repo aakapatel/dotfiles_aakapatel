@@ -1,3 +1,0 @@
-2024-01-27 22:07:32.336 [info] Started initializing default profile extensions in extensions installation folder. file:///home/aakapatel/.vscode/extensions
-2024-01-27 22:07:32.571 [warning] Failed to create default profile extensions manifest in extensions installation folder. file:///home/aakapatel/.vscode/extensions Unable to create file 'vscode-userdata:/home/aakapatel/.vscode/extensions/extensions.json' that already exists when overwrite flag is not set
-2024-01-27 22:07:32.572 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/aakapatel/.vscode/extensions
