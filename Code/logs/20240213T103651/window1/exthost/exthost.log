@@ -1,0 +1,68 @@
+2024-02-13 10:36:52.557 [info] Extension host with pid 73544 started
+2024-02-13 10:36:52.612 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-02-13 10:36:52.852 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-02-13 10:36:52.867 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-02-13 10:36:52.921 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-02-13 10:36:52.980 [info] Eager extensions activated
+2024-02-13 10:36:52.993 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-02-13 10:36:52.995 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-02-13 10:37:12.863 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2024-02-13 10:37:18.797 [info] ExtensionService#_doActivateExtension xaver.clang-format, startup: false, activationEvent: 'onLanguage:cpp'
+2024-02-13 10:37:35.012 [info] ExtensionService#_doActivateExtension ms-vscode.cpptools, startup: false, activationEvent: 'onLanguage:cpp'
+2024-02-13 10:38:38.698 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-02-13 10:38:38.739 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-02-13 10:39:50.746 [info] ExtensionService#_doActivateExtension ms-python.python, startup: false, activationEvent: 'onLanguage:cpp', root cause: ms-iot.vscode-ros
+2024-02-13 10:39:51.252 [info] ExtensionService#_doActivateExtension ms-iot.vscode-ros, startup: false, activationEvent: 'onLanguage:cpp'
+2024-02-13 10:39:51.460 [info] ExtensionService#_doActivateExtension ms-python.vscode-pylance, startup: false, activationEvent: 'api', root cause: ms-python.python
+2024-02-13 10:39:55.580 [error] [ms-iot.vscode-ros] provider FAILED
+2024-02-13 10:39:55.580 [error] Error: Command failed: clang-format -style='{"BasedOnStyle":"Google","AccessModifierOffset":-2,"ConstructorInitializerIndentWidth":2,"AlignEscapedNewlinesLeft":false,"AlignTrailingComments":true,"AllowAllParametersOfDeclarationOnNextLine":false,"AllowShortIfStatementsOnASingleLine":false,"AllowShortLoopsOnASingleLine":false,"AllowShortFunctionsOnASingleLine":"None","AlwaysBreakTemplateDeclarations":true,"AlwaysBreakBeforeMultilineStrings":true,"BreakBeforeBinaryOperators":false,"BreakBeforeTernaryOperators":false,"BreakConstructorInitializersBeforeComma":true,"BinPackParameters":true,"ColumnLimit":120,"ConstructorInitializerAllOnOneLineOrOnePerLine":true,"DerivePointerBinding":false,"PointerBindsToType":true,"ExperimentalAutoDetectBinPacking":false,"IndentCaseLabels":true,"MaxEmptyLinesToKeep":1,"NamespaceIndentation":"None","ObjCSpaceBeforeProtocolList":true,"PenaltyBreakBeforeFirstCallParameter":19,"PenaltyBreakComment":60,"PenaltyBreakString":1,"PenaltyBreakFirstLessLess":1000,"PenaltyExcessCharacter":1000,"PenaltyReturnTypeOnItsOwnLine":90,"SpacesBeforeTrailingComments":2,"Cpp11BracedListStyle":false,"Standard":"Auto","IndentWidth":2,"TabWidth":2,"UseTab":"Never","IndentFunctionDeclarationAfterType":false,"SpacesInParentheses":false,"SpacesInAngles":false,"SpaceInEmptyParentheses":false,"SpacesInCStyleCastParentheses":false,"SpaceAfterControlStatementKeyword":true,"SpaceBeforeAssignmentOperators":true,"ContinuationIndentWidth":4,"SortIncludes":false,"SpaceAfterCStyleCast":false,"BreakBeforeBraces":"Custom","BraceWrapping":{"AfterClass":true,"AfterControlStatement":true,"AfterEnum":true,"AfterFunction":true,"AfterNamespace":true,"AfterStruct":true,"AfterUnion":true,"BeforeCatch":true,"BeforeElse":true,"IndentBraces":false}}'
+/bin/sh: 1: clang-format: not found
+
+	at ChildProcess.exithandler (node:child_process:431:12)
+	at ChildProcess.emit (node:events:514:28)
+	at maybeClose (node:internal/child_process:1091:16)
+	at Socket.<anonymous> (node:internal/child_process:449:11)
+	at Socket.emit (node:events:514:28)
+	at Pipe.<anonymous> (node:net:323:12)
+2024-02-13 10:40:07.593 [error] [ms-iot.vscode-ros] provider FAILED
+2024-02-13 10:40:07.593 [error] Error: Command failed: clang-format -style='{"BasedOnStyle":"Google","AccessModifierOffset":-2,"ConstructorInitializerIndentWidth":2,"AlignEscapedNewlinesLeft":false,"AlignTrailingComments":true,"AllowAllParametersOfDeclarationOnNextLine":false,"AllowShortIfStatementsOnASingleLine":false,"AllowShortLoopsOnASingleLine":false,"AllowShortFunctionsOnASingleLine":"None","AlwaysBreakTemplateDeclarations":true,"AlwaysBreakBeforeMultilineStrings":true,"BreakBeforeBinaryOperators":false,"BreakBeforeTernaryOperators":false,"BreakConstructorInitializersBeforeComma":true,"BinPackParameters":true,"ColumnLimit":120,"ConstructorInitializerAllOnOneLineOrOnePerLine":true,"DerivePointerBinding":false,"PointerBindsToType":true,"ExperimentalAutoDetectBinPacking":false,"IndentCaseLabels":true,"MaxEmptyLinesToKeep":1,"NamespaceIndentation":"None","ObjCSpaceBeforeProtocolList":true,"PenaltyBreakBeforeFirstCallParameter":19,"PenaltyBreakComment":60,"PenaltyBreakString":1,"PenaltyBreakFirstLessLess":1000,"PenaltyExcessCharacter":1000,"PenaltyReturnTypeOnItsOwnLine":90,"SpacesBeforeTrailingComments":2,"Cpp11BracedListStyle":false,"Standard":"Auto","IndentWidth":2,"TabWidth":2,"UseTab":"Never","IndentFunctionDeclarationAfterType":false,"SpacesInParentheses":false,"SpacesInAngles":false,"SpaceInEmptyParentheses":false,"SpacesInCStyleCastParentheses":false,"SpaceAfterControlStatementKeyword":true,"SpaceBeforeAssignmentOperators":true,"ContinuationIndentWidth":4,"SortIncludes":false,"SpaceAfterCStyleCast":false,"BreakBeforeBraces":"Custom","BraceWrapping":{"AfterClass":true,"AfterControlStatement":true,"AfterEnum":true,"AfterFunction":true,"AfterNamespace":true,"AfterStruct":true,"AfterUnion":true,"BeforeCatch":true,"BeforeElse":true,"IndentBraces":false}}'
+/bin/sh: 1: clang-format: not found
+
+	at ChildProcess.exithandler (node:child_process:431:12)
+	at ChildProcess.emit (node:events:514:28)
+	at maybeClose (node:internal/child_process:1091:16)
+	at Socket.<anonymous> (node:internal/child_process:449:11)
+	at Socket.emit (node:events:514:28)
+	at Pipe.<anonymous> (node:net:323:12)
+2024-02-13 10:40:16.324 [error] [ms-iot.vscode-ros] provider FAILED
+2024-02-13 10:40:16.324 [error] Error: Command failed: clang-format -style='{"BasedOnStyle":"Google","AccessModifierOffset":-2,"ConstructorInitializerIndentWidth":2,"AlignEscapedNewlinesLeft":false,"AlignTrailingComments":true,"AllowAllParametersOfDeclarationOnNextLine":false,"AllowShortIfStatementsOnASingleLine":false,"AllowShortLoopsOnASingleLine":false,"AllowShortFunctionsOnASingleLine":"None","AlwaysBreakTemplateDeclarations":true,"AlwaysBreakBeforeMultilineStrings":true,"BreakBeforeBinaryOperators":false,"BreakBeforeTernaryOperators":false,"BreakConstructorInitializersBeforeComma":true,"BinPackParameters":true,"ColumnLimit":120,"ConstructorInitializerAllOnOneLineOrOnePerLine":true,"DerivePointerBinding":false,"PointerBindsToType":true,"ExperimentalAutoDetectBinPacking":false,"IndentCaseLabels":true,"MaxEmptyLinesToKeep":1,"NamespaceIndentation":"None","ObjCSpaceBeforeProtocolList":true,"PenaltyBreakBeforeFirstCallParameter":19,"PenaltyBreakComment":60,"PenaltyBreakString":1,"PenaltyBreakFirstLessLess":1000,"PenaltyExcessCharacter":1000,"PenaltyReturnTypeOnItsOwnLine":90,"SpacesBeforeTrailingComments":2,"Cpp11BracedListStyle":false,"Standard":"Auto","IndentWidth":2,"TabWidth":2,"UseTab":"Never","IndentFunctionDeclarationAfterType":false,"SpacesInParentheses":false,"SpacesInAngles":false,"SpaceInEmptyParentheses":false,"SpacesInCStyleCastParentheses":false,"SpaceAfterControlStatementKeyword":true,"SpaceBeforeAssignmentOperators":true,"ContinuationIndentWidth":4,"SortIncludes":false,"SpaceAfterCStyleCast":false,"BreakBeforeBraces":"Custom","BraceWrapping":{"AfterClass":true,"AfterControlStatement":true,"AfterEnum":true,"AfterFunction":true,"AfterNamespace":true,"AfterStruct":true,"AfterUnion":true,"BeforeCatch":true,"BeforeElse":true,"IndentBraces":false}}'
+/bin/sh: 1: clang-format: not found
+
+	at ChildProcess.exithandler (node:child_process:431:12)
+	at ChildProcess.emit (node:events:514:28)
+	at maybeClose (node:internal/child_process:1091:16)
+	at Socket.<anonymous> (node:internal/child_process:449:11)
+	at Socket.emit (node:events:514:28)
+	at Pipe.<anonymous> (node:net:323:12)
+2024-02-13 10:40:37.693 [error] [ms-iot.vscode-ros] provider FAILED
+2024-02-13 10:40:37.694 [error] Error: Command failed: clang-format -style='{"BasedOnStyle":"Google","AccessModifierOffset":-2,"ConstructorInitializerIndentWidth":2,"AlignEscapedNewlinesLeft":false,"AlignTrailingComments":true,"AllowAllParametersOfDeclarationOnNextLine":false,"AllowShortIfStatementsOnASingleLine":false,"AllowShortLoopsOnASingleLine":false,"AllowShortFunctionsOnASingleLine":"None","AlwaysBreakTemplateDeclarations":true,"AlwaysBreakBeforeMultilineStrings":true,"BreakBeforeBinaryOperators":false,"BreakBeforeTernaryOperators":false,"BreakConstructorInitializersBeforeComma":true,"BinPackParameters":true,"ColumnLimit":120,"ConstructorInitializerAllOnOneLineOrOnePerLine":true,"DerivePointerBinding":false,"PointerBindsToType":true,"ExperimentalAutoDetectBinPacking":false,"IndentCaseLabels":true,"MaxEmptyLinesToKeep":1,"NamespaceIndentation":"None","ObjCSpaceBeforeProtocolList":true,"PenaltyBreakBeforeFirstCallParameter":19,"PenaltyBreakComment":60,"PenaltyBreakString":1,"PenaltyBreakFirstLessLess":1000,"PenaltyExcessCharacter":1000,"PenaltyReturnTypeOnItsOwnLine":90,"SpacesBeforeTrailingComments":2,"Cpp11BracedListStyle":false,"Standard":"Auto","IndentWidth":2,"TabWidth":2,"UseTab":"Never","IndentFunctionDeclarationAfterType":false,"SpacesInParentheses":false,"SpacesInAngles":false,"SpaceInEmptyParentheses":false,"SpacesInCStyleCastParentheses":false,"SpaceAfterControlStatementKeyword":true,"SpaceBeforeAssignmentOperators":true,"ContinuationIndentWidth":4,"SortIncludes":false,"SpaceAfterCStyleCast":false,"BreakBeforeBraces":"Custom","BraceWrapping":{"AfterClass":true,"AfterControlStatement":true,"AfterEnum":true,"AfterFunction":true,"AfterNamespace":true,"AfterStruct":true,"AfterUnion":true,"BeforeCatch":true,"BeforeElse":true,"IndentBraces":false}}'
+/bin/sh: 1: clang-format: not found
+
+	at ChildProcess.exithandler (node:child_process:431:12)
+	at ChildProcess.emit (node:events:514:28)
+	at maybeClose (node:internal/child_process:1091:16)
+	at Socket.<anonymous> (node:internal/child_process:449:11)
+	at Socket.emit (node:events:514:28)
+	at Pipe.<anonymous> (node:net:323:12)
+2024-02-13 10:41:21.889 [error] [ms-iot.vscode-ros] provider FAILED
+2024-02-13 10:41:21.890 [error] Error: Command failed: clang-format -style='{"BasedOnStyle":"Google","AccessModifierOffset":-2,"ConstructorInitializerIndentWidth":2,"AlignEscapedNewlinesLeft":false,"AlignTrailingComments":true,"AllowAllParametersOfDeclarationOnNextLine":false,"AllowShortIfStatementsOnASingleLine":false,"AllowShortLoopsOnASingleLine":false,"AllowShortFunctionsOnASingleLine":"None","AlwaysBreakTemplateDeclarations":true,"AlwaysBreakBeforeMultilineStrings":true,"BreakBeforeBinaryOperators":false,"BreakBeforeTernaryOperators":false,"BreakConstructorInitializersBeforeComma":true,"BinPackParameters":true,"ColumnLimit":120,"ConstructorInitializerAllOnOneLineOrOnePerLine":true,"DerivePointerBinding":false,"PointerBindsToType":true,"ExperimentalAutoDetectBinPacking":false,"IndentCaseLabels":true,"MaxEmptyLinesToKeep":1,"NamespaceIndentation":"None","ObjCSpaceBeforeProtocolList":true,"PenaltyBreakBeforeFirstCallParameter":19,"PenaltyBreakComment":60,"PenaltyBreakString":1,"PenaltyBreakFirstLessLess":1000,"PenaltyExcessCharacter":1000,"PenaltyReturnTypeOnItsOwnLine":90,"SpacesBeforeTrailingComments":2,"Cpp11BracedListStyle":false,"Standard":"Auto","IndentWidth":2,"TabWidth":2,"UseTab":"Never","IndentFunctionDeclarationAfterType":false,"SpacesInParentheses":false,"SpacesInAngles":false,"SpaceInEmptyParentheses":false,"SpacesInCStyleCastParentheses":false,"SpaceAfterControlStatementKeyword":true,"SpaceBeforeAssignmentOperators":true,"ContinuationIndentWidth":4,"SortIncludes":false,"SpaceAfterCStyleCast":false,"BreakBeforeBraces":"Custom","BraceWrapping":{"AfterClass":true,"AfterControlStatement":true,"AfterEnum":true,"AfterFunction":true,"AfterNamespace":true,"AfterStruct":true,"AfterUnion":true,"BeforeCatch":true,"BeforeElse":true,"IndentBraces":false}}'
+/bin/sh: 1: clang-format: not found
+
+	at ChildProcess.exithandler (node:child_process:431:12)
+	at ChildProcess.emit (node:events:514:28)
+	at maybeClose (node:internal/child_process:1091:16)
+	at Socket.<anonymous> (node:internal/child_process:449:11)
+	at Socket.emit (node:events:514:28)
+	at Pipe.<anonymous> (node:net:323:12)
+2024-02-13 10:41:57.496 [info] Extension host terminating: renderer closed the MessagePort
+2024-02-13 10:41:57.641 [info] Extension host with pid 73544 exiting with code 0
