@@ -81,29 +81,10 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-#source /opt/ros/noetic/setup.zsh
+source /opt/ros/noetic/setup.zsh
 
 export VISUAL=nvim;
 export EDITOR=nvim;
-
-
-
-
-# if [ -z "$SSH_AUTH_SOCK" ] || [ ! -S "$SSH_AUTH_SOCK" ] ; then
-#     eval "$(ssh-agent -s > /dev/null 2>&1)"
-#     ssh-add -l > /dev/null 2>&1 || ssh-add ~/.ssh/aakapatel > /dev/null 2>&1
-# fi
-
-
-# Check if SSH agent is running
-if [ -z "$SSH_AUTH_SOCK" ]; then
-    eval "$(ssh-agent -s)"
-fi
-
-# Check if the SSH key is added
-if ! ssh-add -l | grep -q "aakapatel"; then
-    ssh-add ~/.ssh/aakapatel
-fi
 
 alias sr="source devel/setup.zsh"
 alias bs="source ~/.zshrc"
