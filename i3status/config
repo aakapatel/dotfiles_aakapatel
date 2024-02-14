@@ -4,22 +4,14 @@
 #  _/ / ___/ /  / /_/ / ___ |/ _, _/ 
 # /___//____/  /_____/_/  |_/_/ |_|  
 #
-# https://github.com/jorgeloopzz 
-
-# i3status configuration file.
-# see "man i3status" for documentation.
-# It is important that this file is edited as UTF-8.
-# The following line should contain a sharp s:
-# ß
-# If the above line is not correctly displayed, fix your editor first!
 
 general {
 	output_format = "i3bar"
 	separator = "|"
-        color_good = "#00ff00" # Light green
+        color_good = "#009900" # Light green
         color_degraded = "#fafe7c" # Light yellow
         color_bad = "#ff0000" # Light red
-        interval = 1 
+        interval = 1
 }
 
 order += "wireless _first_"
@@ -27,13 +19,13 @@ order += "ethernet _first_"
 order += "battery 0"
 order += "disk /"
 order += "cpu_usage"
-order += "cpu_temperature 0"
+# order += "cpu_temperature 0"
 order += "memory"
 order += "tztime local"
 order += "volume master"
 
 wireless _first_ {
-        format_up = "󰤨  %essid %bitrate "
+        format_up = " 󰤨 %essid %bitrate "
         format_down = " 󰤭  Wifi Down"
 }
 
@@ -47,28 +39,28 @@ battery 0 {
         hide_seconds = true
         integer_battery_capacity = true
         last_full_capacity = true
-        status_chr = "+"
-        status_bat = ""
-        status_full = ""
+        status_chr = "󰂄"
+        status_bat = "󱟞"
+        status_full = "󱈏"
 }
 
 disk "/" {
-        format = " SSD  %avail "
+        format = "  %avail "
 	prefix_type = decimal
 }
 
 cpu_usage {
-	format =  " CPU %usage "
+	format =  " 󰍛 %usage "
 }
 
-cpu_temperature 0 {
-    format = " 󰍛 %degrees °C "
-    # command = "sensors | awk '/Package id 0/ {print $4}'"
-}
+# cpu_temperature 0 {
+#     format = " 󰍛 %degrees °C "
+#     # command = "sensors | awk '/Package id 0/ {print $4}'"
+# }
 
 
 memory {
-        format = " RAM  %used "
+        format = "  %used "
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
@@ -78,7 +70,7 @@ tztime local {
 }
 
 volume master {
-	format = " 󰎈 %volume"
-	format_muted = " 󰎊"
+	format = " 󰎈 %volume "
+	format_muted = " 󰎊 "
 	device = "pulse"
 }

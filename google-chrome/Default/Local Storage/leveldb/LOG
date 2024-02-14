@@ -1,0 +1,6 @@
+2023/11/29-11:13:48.092 4 Reusing MANIFEST /home/aakapatel/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
+2023/11/29-11:13:48.092 4 Recovering log #21
+2023/11/29-11:13:48.092 4 Reusing old log /home/aakapatel/.config/google-chrome/Default/Local Storage/leveldb/000021.log 
+2023/11/29-11:14:30.249 6 Level-0 table #25: started
+2023/11/29-11:14:30.259 6 Level-0 table #25: 48232 bytes OK
+2023/11/29-11:14:30.260 6 Delete type=0 #21

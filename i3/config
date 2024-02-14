@@ -17,7 +17,7 @@ set $right semicolon
 
 set $ws8 "8"
 set $ws9 "9"
-font pango:Hack Nerd Font Mono 
+font pango:Hack Nerd Font Mono
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -48,7 +48,7 @@ assign [class="gazebo"] $ws9
 
 bindsym $mod+0 mode "$mode_system"
 
-set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
+set $mode_system [k -> lock] | [l -> logout] | [u -> suspend] | [h -> hibernate] | [r -> reboot] | [s -> shutdown]
 mode "$mode_system" {
 
     bindsym k exec --no-startup-id ~/.config/i3/scripts/i3exit.sh lock, mode "default"
@@ -145,10 +145,6 @@ bindsym $mod+r mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
        bindsym $left       resize shrink width 10 p/home/aakapatel/Downloads/jp.jpgx or 10 ppt
        bindsym $down       resize grow height 10 px or 10 ppt
        bindsym $up         resize shrink height 10 px or 10 ppt
@@ -164,7 +160,8 @@ mode "resize" {
        bindsym Return mode "default"
        bindsym Escape mode "default"
 }
-bindsym $mod+Return exec --no-startup-id alacritty; focus
+# bindsym $mod+Return exec --no-startup-id alacritty; focus
+bindsym $mod+Return exec --no-startup-id kitty; focus
 
 # bindsym $mod+Shift+Return exec --no-startup-id alacritty -e ranger; focus
 
@@ -183,12 +180,15 @@ bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 bindsym $mod+b bar mode toggle
 
 bindsym $mod+i bar mode invisible
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 gaps inner 10
 gaps outer 1
-smart_gaps on
+#smart_gaps on
 smart_borders on
 
+
+
+#
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
@@ -235,37 +235,34 @@ set $text-color          #f3f4f5
 #set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
-# exec_always feh --bg-scale /home/aakapatel/Pictures/him.jpg
 
-# exec_always feh --bg-scale /home/aakapatel/Pictures/dodge2.jpg
+#exec_always feh --bg-scale /home/aakapatel/Pictures/forestlake.jpg
 
-exec_always feh --bg-scale /home/aakapatel/Pictures/px9.jpg
+exec_always feh --bg-fill --randomize /home/aakapatel/Pictures/Walls/
 
-# exec_always feh --bg-scale /home/aakapatel/Pictures/dodge2.jpg
+bindsym $mod+d exec rofi -show drun -opacity "50" -font "Hack Nerd Font Mono 18" -show-icons
 
-bindsym $mod+d exec rofi -show drun -opacity "50" -font "Hack Nerd Font Mono 18"
-
-exec_always compton -f
+# exec_always compton -f
 
 bar {
-   	height 30
-	position bottom
-    font pango: Hack Nerd Font Mono 16
-	status_command i3status
+   	# height 30
+	  position bottom
+    font pango: Hack Nerd Font Mono 15
+	  status_command i3status
   # status_command ~/.config/i3/scripts/cpu_temp.sh
     tray_padding 1
     strip_workspace_numbers yes
 
     colors {
             separator  #0f4f0f
-            background #00001f
-            statusline #00ff00
+            background #000000
+            statusline #009900
 
             #                   border  background text
-            focused_workspace  #00ff00 #00001f    #ffffff
-            active_workspace   #1f222d #252936    #ffffff
-            inactive_workspace #00001f #00001f    #8f8f8f
-            urgent_workspace   #1f222d #1f222d    #ee829f
+            focused_workspace  #93a1a1 #93a1a1    #000000
+            active_workspace   #000000 #000000    #ffffff
+            inactive_workspace #000000 #000000    #ffffff
+            urgent_workspace   #ee889f #93a1a1    #ffffff
             binding_mode       #1f222d #81a1c1    #2e3440
     }
 }
@@ -288,6 +285,11 @@ bar {
 
 exec xset r rate 300 80 
 
-# exec_always xset -dpms 
+# exec_always setxkbmap -layout us
 
+exec --no-startup-id ~/.config/i3/scripts/office.sh
+
+# exec_always xset -dpms 
+exec_always --no-startup-id ~/.config/i3/scripts/keyboard.sh
 exec_always --no-startup-id ~/.config/i3/scripts/dpms_off.sh
+exec_always --no-startup-id ~/.config/i3/scripts/picom.sh
