@@ -183,7 +183,7 @@ bindsym $mod+i bar mode invisible
 for_window [class="^.*"] border pixel 2
 gaps inner 10
 gaps outer 1
-#smart_gaps on
+smart_gaps on
 smart_borders on
 
 
@@ -295,3 +295,4 @@ exec --no-startup-id blueman-applet
 exec_always --no-startup-id ~/.config/i3/scripts/keyboard.sh
 exec_always --no-startup-id ~/.config/i3/scripts/dpms_off.sh
 exec_always --no-startup-id ~/.config/i3/scripts/picom.sh
+bindsym $mod+p exec /home/aakapatel/.config/i3/i3lock-multimonitor/lock
