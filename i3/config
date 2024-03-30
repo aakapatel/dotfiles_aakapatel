@@ -238,7 +238,7 @@ set $urgent-bg-color     #E53935
 
 #exec_always feh --bg-scale /home/aakapatel/Pictures/forestlake.jpg
 
-exec_always feh --bg-fill --randomize /home/aakapatel/Pictures/Walls/
+exec_always feh --bg-fill --randomize /home/aakapatel/dotfiles_aakapatel/Walls/
 
 bindsym $mod+d exec rofi -show drun -opacity "50" -font "Hack Nerd Font Mono 18" -show-icons
 
