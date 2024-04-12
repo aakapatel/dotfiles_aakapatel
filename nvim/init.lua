@@ -1,5 +1,16 @@
 require "core"
 
+vim.api.nvim_command([[
+    autocmd FileType cpp nnoremap <buffer> <Leader>w :call SaveAndFormat()<CR>
+]])
+
+vim.api.nvim_command([[
+    function! SaveAndFormat()
+        silent execute 'w'
+        silent execute '!clang-format -i ' . expand('%')
+    endfunction
+]])
+
 local custom_init_path = vim.api.nvim_get_runtime_file("lua/custom/init.lua", false)[1]
 
 if custom_init_path then
