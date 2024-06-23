@@ -16,6 +16,16 @@ M.general = {
   },
 
   n = {
+
+    -- ...
+    ["<leader>tt"] = {
+      function()
+        require("base46").toggle_transparency()
+      end,
+      "Toggle transparency",
+    },
+
+
     ["<Esc>"] = { "<cmd> noh <CR>", "Clear highlights" },
     -- switch between windows
     ["<C-h>"] = { "<C-w>h", "Window left" },
