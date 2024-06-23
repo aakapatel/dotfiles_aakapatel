@@ -295,4 +295,5 @@ exec --no-startup-id blueman-applet
 exec_always --no-startup-id ~/.config/i3/scripts/keyboard.sh
 exec_always --no-startup-id ~/.config/i3/scripts/dpms_off.sh
 exec_always --no-startup-id ~/.config/i3/scripts/picom.sh
+exec --no-startup-id ~/.config/i3/scripts/battery_warning.sh
 bindsym $mod+p exec /home/aakapatel/.config/i3/i3lock-multimonitor/lock

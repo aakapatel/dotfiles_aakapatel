@@ -128,76 +128,10 @@ alias dronedust_ssh="ssh dronedust@10.42.0.1"
 alias shafter2_field="ssh shafter2@10.42.0.1"
 alias shafter3d_field="ssh shafter3d@10.42.0.1"
 alias pioneer_field="ssh nucnuc@10.42.0.1"
-alias spotnuc_vnc='ssh spot@10.42.0.1 -L 5901:localhost:5901'
+alias spotnuc_vnc='ssh spotnuc@10.42.0.1 -L 5901:localhost:5901'
 alias shafterx1_lab='ssh shafterx1@192.168.1.250'
 alias shafterx1_field='ssh shafterx1@10.42.0.1'
 alias vim="nvim"
-
-alias spot_lab="ssh spot@192.168.1.107"
-alias spot_field="ssh spot@10.42.0.1"
-alias shafterx2_field='ssh shafterx2@10.42.0.1'
-alias shafterx3_field="ssh shafterx3@10.42.0.1"
-
-
-alias vim="nvim"
-
-alias shafterx2_lab="ssh shafterx2@192.168.1.250"
-
-alias ssh_spot="ssh spot@10.42.10.1"
-alias vncspot_lab="ssh spot@192.168.1.107 -L 5901:127.0.0.1:5901"
-alias vncspot_field="ssh spot@10.42.10.1 -L 5901:127.0.0.1:5901"
-alias vncviewerspot="vncviewer 127.0.0.1:5901"
-alias vncshafterx1="ssh shafterx1@10.42.0.1 -L 5901:127.0.0.1:5901"
-alias vncviewershafterx1="vncviewer 127.0.0.1:5901"
-alias vncshafterx2="ssh shafterx2@10.42.0.1 -L 5901:127.0.0.1:5901"
-alias vncviewershafterx2="vncviewer 127.0.0.1:5901"
-
-alias vncshafterx3="ssh shafterx3@10.42.0.1 -L 5901:127.0.0.1:5901"
-
-alias remote_rviz_shafterx1_mesh="export ROS_MASTER_URI=http://192.168.10.26:11311; export ROS_IP=192.168.10.193"
-
-
-alias remote_rviz_shafterx2_lab="export ROS_MASTER_URI=http://192.168.1.250:11311; export ROS_IP=192.168.1.232"
-alias remote_rviz_shafterx1_lab="export ROS_MASTER_URI=http://192.168.1.251:11311; export ROS_IP=192.168.1.232"
-alias vncshafterx1_lab="ssh shafterx2@192.168.1.251 -L 5901:127.0.0.1:5901"
-alias vncshafterx2_lab="ssh shafterx2@192.168.1.250 -L 5901:127.0.0.1:5901"
-
-
-alias shafterx1_lab='ssh shafterx1@192.168.1.251'
-alias shafterx1_field='ssh shafterx1@10.42.0.1'
-alias shafterx2_field='ssh shafterx2@10.42.0.1'
-alias shafterx3_field="ssh shafterx3@10.42.0.1"
-alias shafterx5_field="ssh shafterx5@10.42.0.1"
-alias shafterx3_lab="ssh shafterx3@192.168.1.48"
-
-alias rviz_shafterx3_lab="export ROS_MASTER_URI=http://192.168.1.48:11311; export ROS_IP=192.168.1.232"
-
-
-alias remote_rviz="export ROS_MASTER_URI=http://10.42.0.1:11311; export ROS_IP=10.42.0.232"
-
-alias vim="nvim"
-
-alias shafterx2_lab="ssh shafterx2@192.168.1.250"
-
-alias ssh_spot="ssh spot@10.42.0.1"
-alias vncspot="ssh spot@10.42.10.1 -L 5901:127.0.0.1:5901"
-alias vncviewerspot="vncviewer 127.0.0.1:5901"
-alias vncshafterx1="ssh shafterx1@10.42.0.1 -L 5901:127.0.0.1:5901"
-alias vncshafterx5="ssh shafterx5@10.42.0.1 -L 5901:127.0.0.1:5901"
-alias vncviewershafterx1="vncviewer 127.0.0.1:5901"
-alias vncshafterx2="ssh shafterx2@10.42.0.1 -L 5901:127.0.0.1:5901"
-alias vncviewershafterx2="vncviewer 127.0.0.1:5901"
-
-alias vncshafterx3="ssh shafterx3@10.42.0.1 -L 5901:127.0.0.1:5901"
-
-alias remote_rviz_shafterx1_mesh="export ROS_MASTER_URI=http://192.168.10.26:11311; export ROS_IP=192.168.10.193"
-
-
-alias remote_rviz_shafterx2_lab="export ROS_MASTER_URI=http://192.168.1.250:11311; export ROS_IP=192.168.1.232"
-alias remote_rviz_shafterx1_lab="export ROS_MASTER_URI=http://192.168.1.251:11311; export ROS_IP=192.168.1.232"
-alias vncshafterx1_lab="ssh shafterx2@192.168.1.251 -L 5901:127.0.0.1:5901"
-alias vncshafterx2_lab="ssh shafterx2@192.168.1.250 -L 5901:127.0.0.1:5901"
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
