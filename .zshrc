@@ -11,6 +11,7 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -108,16 +109,19 @@ if ! ssh-add -l | grep -q "aakapatel"; then
 fi
 
 alias sr="source devel/setup.zsh"
+alias sr="source install/local_setup.zsh"
 alias bs="source ~/.zshrc"
 alias cbe="catkin build exploration"
 alias cba="catkin build acl_exploration"
 alias cbs="catkin build stage_planner"
 alias tmkill="tmux kill-session"
-alias cde="cd ~/catkin_workspaces/exploration_ws; sr"
+alias cde="cd ~/catkin_workspaces/exploration_ws"
+alias cdc="cd ~/colcon_ws; source install/local_setup.sh"
 alias remote_rviz="export ROS_MASTER_URI=http://10.42.0.1:11311; export ROS_IP=10.42.0.232"
 alias remote_mesh_shafter3d="export ROS_MASTER_URI=http://192.168.10.35:11311; export ROS_IP=192.168.10.232"
 alias remote_mesh_shafter2="export ROS_MASTER_URI=http://192.168.10.25:11311; export ROS_IP=192.168.10.232"
 alias cbs="catkin build stage_planner"
+alias cb="colcon build --symlink-install --packages-select stage_planner"
 alias ssh_mesh_shafter2_field="ssh shafter2@192.168.10.25"
 alias ssh_mesh_shafter3d_field="ssh shafter3d@192.168.10.35"
 alias ssh_mesh_shafter4_field="ssh shafter4@192.168.10.45"
@@ -132,6 +136,7 @@ alias spotnuc_vnc='ssh spot@10.42.0.1 -L 5901:localhost:5901'
 alias shafterx1_lab='ssh shafterx1@192.168.1.250'
 alias shafterx1_field='ssh shafterx1@10.42.0.1'
 alias vim="nvim"
+alias vi="nvim"
 
 alias spot_lab="ssh spot@192.168.1.107"
 alias spot_field="ssh spot@10.42.0.1"
@@ -201,7 +206,8 @@ alias remote_rviz_shafterx1_lab="export ROS_MASTER_URI=http://192.168.1.251:1131
 alias vncshafterx1_lab="ssh shafterx2@192.168.1.251 -L 5901:127.0.0.1:5901"
 alias vncshafterx2_lab="ssh shafterx2@192.168.1.250 -L 5901:127.0.0.1:5901"
 
-
+autoload -Uz compinit
+compinit
 
 
 
@@ -235,6 +241,12 @@ export AMENT_PREFIX_PATH=/home/aakapatel/colcon_ws/install:/opt/ros/humble
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# argcomplete for ros2 & colcon
+autoload -U bashcompinit
+bashcompinit
+eval "$(register-python-argcomplete3 ros2)"
+eval "$(register-python-argcomplete3 colcon)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
