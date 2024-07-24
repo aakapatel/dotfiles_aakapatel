@@ -1,44 +1,42 @@
-#import = ["/home/aakapatel/.config/alacritty/themes/themes/github_dark_colorblind.yaml"]
-#theme = "Ashes.dark"
+#   █████╗ ██╗      █████╗  ██████╗██████╗ ██╗████████╗████████╗██╗   ██╗
+#  ██╔══██╗██║     ██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚══██╔══╝╚██╗ ██╔╝
+#  ███████║██║     ███████║██║     ██████╔╝██║   ██║      ██║    ╚████╔╝ 
+#  ██╔══██║██║     ██╔══██║██║     ██╔══██╗██║   ██║      ██║     ╚██╔╝  
+#  ██║  ██║███████╗██║  ██║╚██████╗██║  ██║██║   ██║      ██║      ██║   
+#  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝      ╚═╝   
+#	gh0stzk - https://github.com/gh0stzk/dotfiles
 
-[colors]
-#author = "Chris Kempson"
-#name = "Ashes (dark)"
+import = ["~/.config/alacritty/rice-colors.toml", "~/.config/alacritty/fonts.toml"]
 
-[colors.bright]
-black = "#747c84"
-blue = "#ae95c7"
-cyan = "#95aec7"
-green = "#95c7ae"
-magenta = "#c795ae"
-red = "#c7ae95"
-white = "#f3f4f5"
-yellow = "#aec795"
+live_config_reload = true
 
-[colors.cursor]
-cursor = "#c7ccd1"
-text = "#1c2023"
+[cursor]
+blink_interval = 550
+unfocused_hollow = false
+thickness = 0.15
 
-[colors.normal]
-black = "#1c2023"
-blue = "#ae95c7"
-cyan = "#95aec7"
-green = "#95c7ae"
-magenta = "#c795ae"
-red = "#c7ae95"
-white = "#c7ccd1"
-yellow = "#aec795"
+[cursor.style]
+blinking = "On"
+shape = "Block"
 
-[colors.primary]
-background = "#1c2023"
-foreground = "#c7ccd1"
+[selection]
+save_to_clipboard = true
 
-[env]
-TERM = "xterm-256color"
+[window]
+decorations = "none"
+dynamic_title = true
+opacity = 0.8
+dynamic_padding = true
 
-[font]
-size = 8.0
+[window.padding]
+x = 0
+y = 0
 
-[font.normal]
-family = "Hack Nerd font"
-style = "Regular"
+[scrolling]
+history = 10000
+multiplier = 3
+
+[bell]
+animation = "Linear"
+duration = 0
+command = { program = "paplay", args = ["/usr/share/sounds/freedesktop/stereo/dialog-error.oga"] }
