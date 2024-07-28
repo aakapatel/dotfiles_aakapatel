@@ -8,9 +8,9 @@
 general {
 	output_format = "i3bar"
 	separator = "|"
-        color_good = "#009900" # Light green
+        color_good = "#4f8fbf" # Light green
         color_degraded = "#fafe7c" # Light yellow
-        color_bad = "#ff0000" # Light red
+        color_bad = "#8f0000" # Light red
         interval = 1
 }
 

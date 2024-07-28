@@ -160,8 +160,8 @@ mode "resize" {
        bindsym Return mode "default"
        bindsym Escape mode "default"
 }
-# bindsym $mod+Return exec --no-startup-id alacritty; focus
-bindsym $mod+Return exec --no-startup-id kitty; focus
+bindsym $mod+Return exec --no-startup-id alacritty; focus
+# bindsym $mod+Return exec --no-startup-id kitty; focus
 
 # bindsym $mod+Shift+Return exec --no-startup-id alacritty -e ranger; focus
 
@@ -181,8 +181,8 @@ bindsym $mod+b bar mode toggle
 
 bindsym $mod+i bar mode invisible
 for_window [class="^.*"] border pixel 2
-gaps inner 10
-gaps outer 1
+gaps inner 0
+gaps outer 0
 smart_gaps on
 smart_borders on
 
@@ -248,16 +248,16 @@ bindsym $mod+d exec rofi -show drun -opacity "50" -font "Hack Nerd Font Mono 18"
 bar {
    	# height 30
 	  position bottom
-    font pango: Hack Nerd Font Mono 15
+    font pango: Hack Nerd Font Mono 12
 	  status_command i3status
   # status_command ~/.config/i3/scripts/cpu_temp.sh
     tray_padding 1
     strip_workspace_numbers yes
 
     colors {
-            separator  #0f4f0f
+            separator  #4f8fbf
             background #000000
-            statusline #009900
+            statusline #4f8fbf
 
             #                   border  background text
             focused_workspace  #93a1a1 #93a1a1    #000000
@@ -272,7 +272,7 @@ bar {
 
     # Window color settings
     # class                 border  backgr. text    indicator
-    client.focused          #00ff00 #006f00 #ffffff #00ff00
+    client.focused          #00ff00 #4f8fbf #ffffff #00ff00
     client.unfocused        #2e3440 #1f222d #888888 #1f222d
     client.focused_inactive #2e3440 #1f222d #888888 #1f222d
     client.placeholder      #2e3440 #1f222d #888888 #1f222d
