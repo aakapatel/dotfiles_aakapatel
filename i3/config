@@ -236,8 +236,6 @@ set $text-color          #f3f4f5
 set $urgent-bg-color     #E53935
 
 
-#exec_always feh --bg-scale /home/aakapatel/Pictures/forestlake.jpg
-
 # exec_always feh --bg-fill --randomize /home/aakapatel/dotfiles_aakapatel/Walls/
 exec_always feh --bg-fill /home/aakapatel/dotfiles_aakapatel/Walls/gc.png
 
@@ -248,16 +246,16 @@ bindsym $mod+d exec rofi -show drun -opacity "50" -font "Hack Nerd Font Mono 18"
 bar {
    	# height 30
 	  position bottom
-    font pango: Hack Nerd Font Mono 12
+    font pango: Hack Nerd Font Mono 16
 	  status_command i3status
   # status_command ~/.config/i3/scripts/cpu_temp.sh
     tray_padding 1
     strip_workspace_numbers yes
 
     colors {
-            separator  #4f8fbf
+            separator  #1ab2ad
             background #000000
-            statusline #4f8fbf
+            statusline #1ab2ad
 
             #                   border  background text
             focused_workspace  #93a1a1 #93a1a1    #000000
@@ -272,7 +270,7 @@ bar {
 
     # Window color settings
     # class                 border  backgr. text    indicator
-    client.focused          #00ff00 #4f8fbf #ffffff #00ff00
+    client.focused          #00ff00 #1ab2ad #ffffff #00ff00
     client.unfocused        #2e3440 #1f222d #888888 #1f222d
     client.focused_inactive #2e3440 #1f222d #888888 #1f222d
     client.placeholder      #2e3440 #1f222d #888888 #1f222d

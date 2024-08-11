@@ -255,3 +255,4 @@ export ISAAC_ROS_WS=/ssd/workspaces/isaac_ros-dev/
 export ISAAC_ROS_WS=/home/workspaces/isaac_ros-dev/
 export ISAAC_ROS_WS=/home/aakapatel/workspaces/isaac_ros-dev/
 export ISAAC_ROS_WS=/home/aakapatel/workspaces/isaac_ros-dev/
+export ISAAC_ROS_WS=/home/aakapatel/workspaces/isaac_ros-dev/
