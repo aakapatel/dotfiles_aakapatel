@@ -1,5 +1,0 @@
-2024-02-05 12:55:56.156 [info] update#setState idle
-2024-02-05 12:55:56.777 [error] vscode-file: Refused to load resource /snap/code/149/usr/share/code/resources/app/extensions/theme-seti/icons/seti.woff from vscode-file: protocol (original URL: vscode-file://vscode-app/snap/code/149/usr/share/code/resources/app/extensions/theme-seti/icons/seti.woff)
-2024-02-05 12:56:26.080 [info] update#setState checking for updates
-2024-02-05 12:56:26.080 [info] update#setState idle
-2024-02-05 13:51:49.275 [info] Extension host with pid 4822 exited with code: 0, signal: unknown.
