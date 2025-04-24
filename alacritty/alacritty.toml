@@ -1,43 +1,53 @@
-#   █████╗ ██╗      █████╗  ██████╗██████╗ ██╗████████╗████████╗██╗   ██╗
-#  ██╔══██╗██║     ██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚══██╔══╝╚██╗ ██╔╝
-#  ███████║██║     ███████║██║     ██████╔╝██║   ██║      ██║    ╚████╔╝ 
-#  ██╔══██║██║     ██╔══██║██║     ██╔══██╗██║   ██║      ██║     ╚██╔╝  
-#  ██║  ██║███████╗██║  ██║╚██████╗██║  ██║██║   ██║      ██║      ██║   
-#  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝      ╚═╝   
-#	gh0stzk - https://github.com/gh0stzk/dotfiles
-
-import = ["~/.config/alacritty/rice-colors.toml", "~/.config/alacritty/fonts.toml"]
-# import = ["~/.config/alacritty/themes/themes/marine_dark.toml", "~/.config/alacritty/fonts.toml"]
-
-live_config_reload = true
-
-[cursor]
-blink_interval = 550
-unfocused_hollow = false
-thickness = 0.15
-
-[cursor.style]
-blinking = "On"
-shape = "Block"
-
-[selection]
-save_to_clipboard = true
+[env]
+TERM = "xterm-256color"
 
 [window]
-decorations = "none"
-dynamic_title = true
-opacity = 0.8
-dynamic_padding = true
+padding.x = 10
+padding.y = 10
 
-[window.padding]
-x = 0
-y = 0
+decorations = "Buttonless"
 
-[scrolling]
-history = 10000
-multiplier = 3
+opacity = 0.6
+blur = true
 
-[bell]
-animation = "Linear"
-duration = 0
-command = { program = "paplay", args = ["/usr/share/sounds/freedesktop/stereo/dialog-error.oga"] }
+option_as_alt = "Both"
+
+[font]
+normal.family = "Hack Nerd Font Mono"
+
+size = 15
+
+# Default colors
+[colors.primary]
+background = '#011423'
+foreground = '#CBE0F0'
+
+# Colors the cursor will use if `custom_cursor_colors` is true
+[colors.cursor]
+text = "#011423"
+cursor = "#47FF9C"
+
+[colors.normal]
+black = "#214969"
+red = "#E52E2E"
+green = "#44FFB1"
+yellow = "#FFE073"
+blue = "#0FC5ED"
+magenta = "#a277ff"
+cyan = "#24EAF7"
+white = "#24EAF7"
+
+[colors.bright]
+black = "#214969"
+red = "#E52E2E"
+green = "#44FFB1"
+yellow = "#FFE073"
+blue = "#A277FF"
+magenta = "#a277ff"
+cyan = "#24EAF7"
+white = "#24EAF7"
+
+# [general]
+# import = [
+#     "~/.config/alacritty/themes/themes/coolnight.toml"
+# ]
