@@ -4,5 +4,5 @@
 if hyprctl monitors | grep -q "DP-3"; then
     ln -sf ~/.config/hypr/monitors_home.conf ~/.config/hypr/monitors.conf
 else
-    ln -sf ~/.config/hypr/monitors.conf ~/.config/hypr/monitors.conf
+    ln -sf ~/.config/hypr/monitors_office.conf ~/.config/hypr/monitors.conf
 fi
