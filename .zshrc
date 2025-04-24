@@ -78,144 +78,40 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting )
 
 source $ZSH/oh-my-zsh.sh
 
-source /opt/ros/humble/setup.zsh
-
-# source ~/ros_catkin_ws/devel_isolated/setup.zsh
+# source /opt/ros/humble/setup.zsh
 
 export VISUAL=nvim;
 export EDITOR=nvim;
 
-
-
-
-# if [ -z "$SSH_AUTH_SOCK" ] || [ ! -S "$SSH_AUTH_SOCK" ] ; then
-#     eval "$(ssh-agent -s > /dev/null 2>&1)"
-#     ssh-add -l > /dev/null 2>&1 || ssh-add ~/.ssh/aakapatel > /dev/null 2>&1
-# fi
-
-
-# Check if SSH agent is running
+# Start SSH agent if not already running
 if [ -z "$SSH_AUTH_SOCK" ]; then
     eval "$(ssh-agent -s)" >/dev/null 2>&1
 fi
 
-# Check if the SSH key is added
-if ! ssh-add -l | grep -q "aakapatel"; then
+# Add the SSH key if not already added
+if ! ssh-add -l 2>/dev/null | grep -q "aakapatel"; then
     ssh-add ~/.ssh/aakapatel >/dev/null 2>&1
 fi
+
+
 
 # alias sr="source devel/setup.zsh"
 alias sr="source install/local_setup.zsh"
 alias bs="source ~/.zshrc"
-alias cbe="catkin build exploration"
-alias cba="catkin build acl_exploration"
-alias cbs="catkin build stage_planner"
 alias tmkill="tmux kill-session"
-alias cde="cd ~/catkin_workspaces/exploration_ws"
-alias cdc="cd ~/colcon_ws; source install/local_setup.zsh;"
-alias remote_rviz="export ROS_MASTER_URI=http://10.42.0.1:11311; export ROS_IP=10.42.0.244"
-alias remote_mesh_shafter3d="export ROS_MASTER_URI=http://192.168.10.35:11311; export ROS_IP=192.168.10.244"
-alias remote_mesh_shafter2="export ROS_MASTER_URI=http://192.168.10.25:11311; export ROS_IP=192.168.10.244"
-alias cbs="catkin build stage_planner"
-alias cb="colcon build --symlink-install --packages-select stage_planner"
-alias ssh_mesh_shafter2_field="ssh shafter2@192.168.10.25"
-alias ssh_mesh_shafter3d_field="ssh shafter3d@192.168.10.35"
-alias ssh_mesh_shafter4_field="ssh shafter4@192.168.10.45"
-alias ssh_dronedust_vicon="ssh dronedust@192.168.1.95"
-alias dronedust_ssh_subt="ssh dronedust@10.42.0.1"
-alias shafter4_field="ssh shafter4@10.42.0.1"
-alias dronedust_ssh="ssh dronedust@10.42.0.1"
-alias shafter2_field="ssh shafter2@10.42.0.1"
-alias shafter3d_field="ssh shafter3d@10.42.0.1"
-alias pioneer_field="ssh nucnuc@10.42.0.1"
-alias spotnuc_vnc='ssh spot@10.42.0.1 -L 5901:localhost:5901'
-alias shafterx1_lab='ssh shafterx1@192.168.1.250'
-alias shafterx1_field='ssh shafterx1@10.42.0.1'
+# alias cde="cd ~/catkin_workspaces/exploration_ws"
+alias cde="cd ~/colcon_workspaces/exploration_ws"
 alias vim="nvim"
 alias vi="nvim"
-alias cb=' colcon build --packages-skip ros1_bridge --cmake-args -DCMAKE_BUILD_TYPE=Release'
-
-
-alias spot_lab="ssh spot@192.168.1.107"
-alias spot_field="ssh spot@10.42.0.1"
-alias shafterx2_field='ssh shafterx2@10.42.0.1'
-alias shafterx3_field="ssh shafterx3@10.42.0.1"
-alias shafterx4_field="ssh shafterx4@10.42.0.1"
-
-
-alias vim="nvim"
-
-alias shafterx2_lab="ssh shafterx2@192.168.1.250"
-
-alias ssh_spot="ssh spot@10.42.10.1"
-alias vncspot_lab="ssh spot@192.168.1.107 -L 5901:127.0.0.1:5901"
-alias vncspot_field="ssh spot@10.42.10.1 -L 5901:127.0.0.1:5901"
-alias vncviewer_robot="vncviewer 127.0.0.1:5902"
-alias vncshafterx1="ssh shafterx1@10.42.0.1 -L 5901:127.0.0.1:5901"
-alias vncshafterx2="ssh shafterx2@10.42.0.1 -L 5901:127.0.0.1:5901"
-
-alias vncshafterx3="ssh shafterx3@10.42.0.1 -L 5901:127.0.0.1:5901"
-alias vncshafterx4="ssh shafterx4@10.42.0.1 -L 5901:127.0.0.1:5902"
-alias vncviewershafterx4="vncviewer 127.0.0.1:5901"
-
-alias remote_rviz_shafterx1_mesh="export ROS_MASTER_URI=http://192.168.10.26:11311; export ROS_IP=192.168.10.193"
-
-alias remote_rviz_husky_subt_net="export ROS_MASTER_URI=http://192.168.3.108:11311; export ROS_IP=192.168.3.227"
-
-alias remote_rviz_shafterx2_lab="export ROS_MASTER_URI=http://192.168.1.250:11311; export ROS_IP=192.168.1.244"
-alias remote_rviz_shafterx1_lab="export ROS_MASTER_URI=http://192.168.1.251:11311; export ROS_IP=192.168.1.244"
-alias vncshafterx1_lab="ssh shafterx2@192.168.1.251 -L 5901:127.0.0.1:5901"
-alias vncshafterx2_lab="ssh shafterx2@192.168.1.250 -L 5901:127.0.0.1:5901"
-
-
-alias shafterx1_lab='ssh shafterx1@192.168.1.251'
-alias shafterx1_field='ssh shafterx1@10.42.0.1'
-alias shafterx2_field='ssh shafterx2@10.42.0.1'
-alias shafterx3_field="ssh shafterx3@10.42.0.1"
-alias shafterx5_field="ssh shafterx5@10.42.0.1"
-alias shafterx3_lab="ssh shafterx3@192.168.1.48"
-
-alias rviz_shafterx3_lab="export ROS_MASTER_URI=http://192.168.1.48:11311; export ROS_IP=192.168.1.244"
-
-
-alias remote_rviz="export ROS_MASTER_URI=http://10.42.0.1:11311; export ROS_IP=10.42.0.244"
-
-alias vim="nvim"
-
-alias shafterx2_lab="ssh shafterx2@192.168.1.250"
-
-alias ssh_spot="ssh spot@10.42.0.1"
-alias vncspot="ssh spot@10.42.10.1 -L 5901:127.0.0.1:5901"
-alias vncviewerspot="vncviewer 127.0.0.1:5901"
-alias vncshafterx1="ssh shafterx1@10.42.0.1 -L 5901:127.0.0.1:5901"
-alias vncshafterx5="ssh shafterx5@10.42.0.1 -L 5901:127.0.0.1:5901"
-alias vncviewershafterx1="vncviewer 127.0.0.1:5901"
-alias vncshafterx2="ssh shafterx2@10.42.0.1 -L 5901:127.0.0.1:5901"
-alias vncviewershafterx2="vncviewer 127.0.0.1:5901"
-
-alias vncshafterx3="ssh shafterx3@10.42.0.1 -L 5901:127.0.0.1:5901"
-
-alias remote_rviz_shafterx1_mesh="export ROS_MASTER_URI=http://192.168.10.26:11311; export ROS_IP=192.168.10.193"
-
-
-alias vnchusky_subt_net="ssh husky@192.168.3.108 -L 5902:127.0.0.1:5902"
-alias vnchusky_hotspot="ssh husky@10.42.0.1 -L 5902:127.0.0.1:5902"
-
-
-alias remote_rviz_shafterx2_lab="export ROS_MASTER_URI=http://192.168.1.250:11311; export ROS_IP=192.168.1.244"
-alias remote_rviz_shafterx1_lab="export ROS_MASTER_URI=http://192.168.1.251:11311; export ROS_IP=192.168.1.244"
-alias vncshafterx1_lab="ssh shafterx2@192.168.1.251 -L 5901:127.0.0.1:5901"
-alias vncshafterx2_lab="ssh shafterx2@192.168.1.250 -L 5901:127.0.0.1:5901"
+alias ls="eza --icons=always"
+alias cb=' colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release'
 
 autoload -Uz compinit
 compinit
-
-alias gotop="gotop-cjbassi"
-
 
 
 export AMENT_PREFIX_PATH=/home/aakapatel/colcon_ws/install:/opt/ros/humble
@@ -248,16 +144,16 @@ export AMENT_PREFIX_PATH=/home/aakapatel/colcon_ws/install:/opt/ros/humble
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # argcomplete for ros2 & colcon
-autoload -U bashcompinit
-bashcompinit
-eval "$(register-python-argcomplete3 ros2)"
-eval "$(register-python-argcomplete3 colcon)"
+# autoload -U bashcompinit
+# bashcompinit
+# eval "$(register-python-argcomplete3 ros2)"
+# eval "$(register-python-argcomplete3 colcon)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source /home/aakapatel/tmp/alacritty/extra/completions/alacritty.bash
-export ISAAC_ROS_WS=/ssd/workspaces/isaac_ros-dev/
-export ISAAC_ROS_WS=/home/workspaces/isaac_ros-dev/
-export ISAAC_ROS_WS=/home/aakapatel/workspaces/isaac_ros-dev/
-export ISAAC_ROS_WS=/home/aakapatel/workspaces/isaac_ros-dev/
-export ISAAC_ROS_WS=/home/aakapatel/workspaces/isaac_ros-dev/
+# source /home/aakapatel/tmp/alacritty/extra/completions/alacritty.bash
+# export ISAAC_ROS_WS=/ssd/workspaces/isaac_ros-dev/
+# export ISAAC_ROS_WS=/home/workspaces/isaac_ros-dev/
+# export ISAAC_ROS_WS=/home/aakapatel/workspaces/isaac_ros-dev/
+# export ISAAC_ROS_WS=/home/aakapatel/workspaces/isaac_ros-dev/
+# export ISAAC_ROS_WS=/home/aakapatel/workspaces/isaac_ros-dev/
