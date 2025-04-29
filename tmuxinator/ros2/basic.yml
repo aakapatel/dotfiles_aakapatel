@@ -1,0 +1,37 @@
+# ~/.tmuxinator/basic.yml 
+
+name: basic
+root: ~/
+windows:
+  - odometry:
+      layout: even-horizontal 
+      panes:
+        - dlio:
+          - cdg
+          - sleep 5  
+          - ros2 launch direct_lidar_inertial_odometry dlio.launch.py 
+        - traversability_node:
+          - cde 
+          # - cd src/traversability_stage
+          # - python3 traversability.py 
+
+  - sensors:
+      # layout: main-vertical 
+      layout: tiled 
+      panes:
+        - ouster:
+          - cds
+          - sleep 1  
+          - ros2 launch ouster_ros driver.launch.py 
+        - vectornav:
+          - cds 
+          - sleep 1 
+          - ros2 launch vectornav vectornav.launch.py 
+        - realsense:  
+          - cds 
+          - sleep 1
+          - ros2 launch realsense2_camera rs_launch.py
+        - hesai_lidar: 
+          - cds 
+          - sleep 1
+          - ros2 launch hesai_ros_driver start.py
