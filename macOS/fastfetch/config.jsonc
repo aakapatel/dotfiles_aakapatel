@@ -13,14 +13,16 @@
     // "type": "kitty-direct",
     "type": "kitty-icat",
     // "source": "~/.config/fastfetch/images/star-saber-ship-linkarzu.png",
-    "source": "~/.config/fastfetch/images/link-green.png",
+    // "source": "~/.config/fastfetch/images/yoda.png",
+    "source": "~/.config/fastfetch/images/r2.png",
+    // "source": "~/.config/fastfetch/images/sw.png",
+    // "source": "~/.config/fastfetch/images/link-green.png",
     "height": 15,
-    // "width": 30,
+    "width": 50,
     "position": "left",
     "padding": {
-      "top": 5,
-      "right": 0,
-    },
+      "top": 3
+    }
   },
   "display": {
     "separator": " ",
