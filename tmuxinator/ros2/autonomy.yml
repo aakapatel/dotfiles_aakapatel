@@ -12,7 +12,7 @@ windows:
           - ros2 launch direct_lidar_inertial_odometry dlio.launch.py 
         - confidence_mapping:
           - cde 
-          - history -s 'ros2 launch confidence_mapping confidence_mapping.launch.py'
+          - history -s 'ros2 launch confidence_mapping confidence_map.launch.py'
         - stage_planner:
           - cde 
           - history -s 'ros2 launch stage_planner stage_planner.launch.py' 
