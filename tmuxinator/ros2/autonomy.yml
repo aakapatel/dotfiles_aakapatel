@@ -1,0 +1,58 @@
+# ~/.tmuxinator/autonomy.yml 
+
+name: autonomy
+root: ~/
+windows:
+  - odometry:
+      layout: tiled 
+      panes:
+        - dlio:
+          - cdg
+          - sleep 5  
+          - ros2 launch direct_lidar_inertial_odometry dlio.launch.py 
+        - confidence_mapping:
+          - cde 
+          - history -s 'ros2 launch confidence_mapping confidence_mapping.launch.py'
+        - stage_planner:
+          - cde 
+          - history -s 'ros2 launch stage_planner stage_planner.launch.py' 
+        - rosbag:
+          - cd rosbags
+
+
+  - sensors:
+      # layout: main-vertical 
+      layout: tiled 
+      panes:
+        - ouster:
+          - cds
+          - sleep 1  
+          - ros2 launch ouster_ros driver.launch.py 
+        - vectornav:
+          - cds 
+          - sleep 1 
+          - ros2 launch vectornav vectornav.launch.py 
+        # - realsense:  
+        #   - cds 
+        #   - sleep 1
+          # - ros2 launch realsense2_camera rs_launch.py
+        # - hesai_lidar: 
+        #   - cds 
+        #   - sleep 1
+          # - ros2 launch hesai_ros_driver start.py
+        # - thermal_camera:
+        #   - cds 
+        #   - sleep 1
+          # - ros2 launch flir_boson_usb flir_boson.launch.xml
+        # - gemini:
+        #   - cds 
+        #   - sleep 1
+          # - ros2 launch orbbec_camera gemini2XL.launch.py
+        - camera_tf: 
+          - cde 
+          - sleep 1
+          - ros2 run tf2_ros static_transform_publisher 0.09 0 -0.10 0 0 0 husky/base_link camera_link
+        - hesai_tf: 
+          - cde 
+          - sleep 1
+          - ros2 run tf2_ros static_transform_publisher 0.05 0 -0.19 0 0 0 husky/base_link husky/hesai_lidar
