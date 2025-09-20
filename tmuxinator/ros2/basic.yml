@@ -4,15 +4,25 @@ name: basic
 root: ~/
 windows:
   - odometry:
-      layout: even-horizontal 
+      layout: tiled 
       panes:
         - dlio:
           - cdg
           - sleep 5  
-          - ros2 launch direct_lidar_inertial_odometry dlio.launch.py 
+          - ROS_DOMAIN_ID=4 ros2 launch direct_lidar_inertial_odometry dlio.launch.py 
+        - elevation:
+          - cde 
+          - ROS_DOMAIN_ID=4 ros2 launch elevation_mapping elevationMapping_launch.py 
         - traversability_node:
           - cde 
-          # - cd src/traversability_stage
+          - ROS_DOMAIN_ID=4 ros2 launch traversability_estimation traversability_estimation.launch.py 
+        - stage:
+          - cde 
+          - ROS_DOMAIN_ID=4 ros2 launch stage_planner stage_husky.launch.py 
+        - rosbag:
+          - cd rosbags
+          - export ROS_DOMAIN_ID=4 
+
           # - python3 traversability.py 
 
   - sensors:
@@ -22,16 +32,32 @@ windows:
         - ouster:
           - cds
           - sleep 1  
-          - ros2 launch ouster_ros driver.launch.py 
+          - ROS_DOMAIN_ID=4 ros2 launch ouster_ros driver.launch.py 
         - vectornav:
           - cds 
           - sleep 1 
-          - ros2 launch vectornav vectornav.launch.py 
+          - ROS_DOMAIN_ID=4 ros2 launch vectornav vectornav.launch.py 
         - realsense:  
           - cds 
           - sleep 1
-          - ros2 launch realsense2_camera rs_launch.py
+          - ROS_DOMAIN_ID=4 ros2 launch realsense2_camera rs_launch.py
         - hesai_lidar: 
           - cds 
           - sleep 1
-          - ros2 launch hesai_ros_driver start.py
+          - ROS_DOMAIN_ID=4 ros2 launch hesai_ros_driver start.py
+        - thermal_camera:
+          - cds 
+          - sleep 1
+          - ROS_DOMAIN_ID=4 ros2 launch flir_boson_usb flir_boson.launch.xml
+        - gemini:
+          - cds 
+          - sleep 1
+          - ROS_DOMAIN_ID=4 ros2 launch orbbec_camera gemini2XL.launch.py
+        - camera_tf: 
+          - cde 
+          - sleep 1
+          - ROS_DOMAIN_ID=4 ros2 run tf2_ros static_transform_publisher 0 0 -0.20 0 0 0 husky/base_link camera_link
+        - hesai_tf: 
+          - cde 
+          - sleep 1
+          - ROS_DOMAIN_ID=4 ros2 run tf2_ros static_transform_publisher 0 0 -0.22 0 0 0 husky/base_link husky/hesai_lidar

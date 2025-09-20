@@ -32,10 +32,10 @@ windows:
           - cds 
           - sleep 1 
           - ros2 launch vectornav vectornav.launch.py 
-        # - realsense:  
-        #   - cds 
-        #   - sleep 1
-          # - ros2 launch realsense2_camera rs_launch.py
+        - simulated_tf:  
+          - cds 
+          - sleep 1
+          - ros2 run tf2_ros static_transform_publisher 0.00 0 -0.0 3.14 0 0 husky/base_link simulated_frame
         # - hesai_lidar: 
         #   - cds 
         #   - sleep 1
@@ -58,3 +58,8 @@ windows:
           - cde 
           - sleep 1
           - ros2 run tf2_ros static_transform_publisher 0.05 0 -0.19 0 0 0 husky/base_link husky/hesai_lidar
+
+
+
+
+
